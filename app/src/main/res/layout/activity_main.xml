@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_security"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:elevation="8dp"
+        android:text="Security"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_pink"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        app:cardBackgroundColor="#FFC0CB"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_security" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_green"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        app:cardBackgroundColor="#90EE90"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@id/cv_pink" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_SOS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="8dp"
+        android:text="SOS"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/cv_pink"
+        app:layout_constraintTop_toTopOf="@id/cv_pink" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_GUARD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="8dp"
+        android:text="GUARD"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/cv_green"
+        app:layout_constraintTop_toTopOf="@id/cv_green" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_tv_SOS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="8dp"
+        android:text="  This is an application
+                        created by Divesh kumar
+                        for learning purpose "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/cv_pink"
+        app:layout_constraintStart_toStartOf="@id/tv_SOS"
+        app:layout_constraintTop_toBottomOf="@id/tv_SOS" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_tv_GAURD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="8dp"
+        android:text="  This is an application
+                        created by Divesh kumar
+                        for learning purpose "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/cv_green"
+        app:layout_constraintStart_toStartOf="@id/tv_GUARD"
+        app:layout_constraintTop_toBottomOf="@id/tv_GUARD" />
+
+    <ImageView
+        android:id="@+id/ic_sos"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="24dp"
+        android:elevation="8dp"
+        android:src="@drawable/ic_sos"
+        app:layout_constraintEnd_toEndOf="@id/text_tv_SOS"
+        app:layout_constraintTop_toTopOf="@id/text_tv_SOS" />
+
+
+    <ImageView
+        android:id="@+id/ic_guard"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="24dp"
+        android:elevation="8dp"
+        android:src="@drawable/ic_guard"
+        app:layout_constraintEnd_toEndOf="@id/text_tv_GAURD"
+        app:layout_constraintTop_toTopOf="@id/text_tv_GAURD" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btm_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_bar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
